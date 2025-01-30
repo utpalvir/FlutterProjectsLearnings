@@ -1,3 +1,26 @@
+buildscript {
+    ext.kotlin_version = '2.0.0' // Define the Kotlin version here
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Kotlin plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Use the defined kotlin_version
+        // Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:8.1.0'
+        // Google services plugin
+        classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
+plugins {
+    // Apply the Android Gradle Plugin (for modularized builds)
+    id 'com.android.application' version '8.1.0' apply false
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+    id 'org.jetbrains.kotlin.android' version '2.0.0' apply false // Correct Kotlin plugin declaration
+}
+
 allprojects {
     repositories {
         google()
@@ -8,9 +31,6 @@ allprojects {
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {

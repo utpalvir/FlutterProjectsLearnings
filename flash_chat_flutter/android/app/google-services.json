@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "236433364357",
+    "project_id": "flashchat-bcd3c",
+    "storage_bucket": "flashchat-bcd3c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236433364357:android:9fab26ef8642a1cd71a0ec",
+        "android_client_info": {
+          "package_name": "com.gaurav.flash_chat_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAssJDl1cIIPyKTdtf8By6UClZlVcLHrZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
